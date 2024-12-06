@@ -19,14 +19,28 @@ class _PantallaInicio extends State<PantallaInicio> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-                 Image.asset("assets/img/gym_logo.png",
+                Image.asset("assets/img/gym_logo.png",
                  width: ancho*0.4,
                  height: alto*0.4,),
-                 const Text("Welcome", style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,fontFamily: 'Lexend Deca'),),
-                 const ElevatedButton(onPressed: null, child: Text('login'))  
+                const Text("Welcome", style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,fontFamily: 'Lexend Deca',color: Colors.white),),
+                ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(foregroundColor: Colors.white,backgroundColor: const Color(0xFF4B0082)), 
+                 child: const Text('email',style: TextStyle(color: Color(0xFF111717),fontWeight: FontWeight.bold),)),
+                const SizedBox(height: 15),
+                ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(foregroundColor: Colors.white,backgroundColor: const Color(0xFF4B0082)), 
+                 child: const Text('Contraseña',style: TextStyle(color: Color(0xFF111717),fontWeight: FontWeight.bold),)),
+                const Text("Forgot Password ?",style: TextStyle(color: Color(0xFF4B0082),fontWeight: FontWeight.bold,fontSize: 10),),
+                const SizedBox(height: 10),
+                ElevatedButton(onPressed: (){},style:ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: const Color(0xFF4B0082),elevation: 5) ,
+                  child: const Text('Login my account', style :  TextStyle( fontWeight: FontWeight.bold, color: Color(0xFF111717)))),
+                const SizedBox(height: 10),
+                const Text("Or Login with",style: TextStyle(color: Color(0xFF4B0082),fontWeight: FontWeight.bold,fontSize: 10),),
+                const SizedBox(height: 10),
+                ElevatedButton(onPressed: (){},style:ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: const Color(0xFF4B0082),elevation: 5) ,
+                  child: const Text('Continue with Google', style :  TextStyle( fontWeight: FontWeight.bold, color: Color(0xFF111717)))),
           ],
           ),
         ),
+        
         )
 
     );

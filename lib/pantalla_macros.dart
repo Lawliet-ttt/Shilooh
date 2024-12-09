@@ -9,6 +9,6 @@ class PantallaMacros extends StatefulWidget {
 class _PantallaMacrosState extends State<PantallaMacros> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

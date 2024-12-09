@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shilooh/pantalla_inicio.dart';
 
-
 void main() {
   runApp( const MyApp());
 }

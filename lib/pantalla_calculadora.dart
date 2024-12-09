@@ -105,7 +105,7 @@ class _PantallaCalculadoraGrasa extends State<PantallaCalculadoraGrasa> {
              ),
              const Text("Calculadora",
              style: TextStyle(
-              color: Color(0xFF4B0082),
+              color: Color(0xFF1A237E),
               fontWeight: FontWeight.bold,
               fontSize: 20
               ),
@@ -118,12 +118,20 @@ class _PantallaCalculadoraGrasa extends State<PantallaCalculadoraGrasa> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-
+                
                 
                 SizedBox(
                 width: ancho*0.4,
-                height: alto*0.2,
-                child: TextField(
+                height: alto*0.26,
+                child: Column(
+                  children: [
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("    Peso (Kg)",style: TextStyle(fontWeight: FontWeight.bold,color: Color(0xFF1A237E)),
+                      ),
+                    ),
+                    SizedBox(height: alto*0.01,),
+                  TextField(
                 controller: _weightController,
                 decoration:   InputDecoration(
                 border: OutlineInputBorder(
@@ -132,36 +140,49 @@ class _PantallaCalculadoraGrasa extends State<PantallaCalculadoraGrasa> {
                 enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: const BorderSide(
-                  color: Color(0xFF4B0082),
-                  width: 2.5,
+                  color: Color(0xFF000000 ),
+                  //width: 2.5,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                   borderSide: const BorderSide(
-                    color: Color(0xFF4B0082),
-                    width: 2.5
+                    color: Color(0xFF000000 ),
+                   // width: 2.5
                   ),
                 ),
-                labelText: "Peso (kg)",
-                labelStyle:  const TextStyle(
-                color: Color(0xFF4B0082), 
+                labelText: "Introduce tu peso",
+                labelStyle:  
+                const TextStyle(
+                color: Color(0xFF000000), 
                 fontSize: 15,
-                fontWeight: FontWeight.bold
+                //fontWeight: FontWeight.bold
                 ),
+                floatingLabelBehavior: FloatingLabelBehavior.never
                 ),
                 keyboardType: TextInputType.number,
                 style:  const TextStyle(
-                  color: Color(0xFF4B0082)),
+                  color: Color(0xFF000000)),
               ),
+                  ],
+                )
+                
             ),
 
 
             //EDAD
                SizedBox(
                 width: ancho*0.4,
-                height: alto*0.2,
-                child: TextField(
+                height: alto*0.26,
+                child: Column(
+                  children: [
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("    Edad",style: TextStyle(fontWeight: FontWeight.bold,color: Color(0xFF1A237E)),
+                      ),
+                    ),
+                    SizedBox(height: alto*0.01,),
+                  TextField(
                 controller: _ageController,
                 decoration:   InputDecoration(
                 border: OutlineInputBorder(
@@ -170,29 +191,33 @@ class _PantallaCalculadoraGrasa extends State<PantallaCalculadoraGrasa> {
                 enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: const BorderSide(
-                  color: Color(0xFF4B0082),
-                  width: 2.5,
+                  color: Color(0xFF000000 ),
+                  //width: 2.5,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                   borderSide: const BorderSide(
-                    color: Color(0xFF4B0082),
-                    width: 2.5
+                    color: Color(0xFF000000 ),
+                   // width: 2.5
                   ),
                 ),
-                
-                labelText: "Edad",
-                labelStyle: const TextStyle(
-                  color: Color(0xFF4B0082),
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold
-                )
+                labelText: "Introduce tu edad",
+                labelStyle:  
+                const TextStyle(
+                color: Color(0xFF000000), 
+                fontSize: 15,
+                //fontWeight: FontWeight.bold
+                ),
+                floatingLabelBehavior: FloatingLabelBehavior.never
                 ),
                 keyboardType: TextInputType.number,
-                style: const TextStyle(
-                  color: Color(0xFF4B0082)),
+                style:  const TextStyle(
+                  color: Color(0xFF000000)),
               ),
+                  ],
+                )
+                
             ),
 
 
@@ -206,8 +231,16 @@ class _PantallaCalculadoraGrasa extends State<PantallaCalculadoraGrasa> {
                 
                 SizedBox(
                 width: ancho*0.4,
-                height: alto*0.2,
-                child: TextField(
+                height: alto*0.26,
+                child: Column(
+                  children: [
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("    Altura",style: TextStyle(fontWeight: FontWeight.bold,color: Color(0xFF1A237E)),
+                      ),
+                    ),
+                    SizedBox(height: alto*0.01,),
+                  TextField(
                 controller: _heightController,
                 decoration:   InputDecoration(
                 border: OutlineInputBorder(
@@ -216,93 +249,124 @@ class _PantallaCalculadoraGrasa extends State<PantallaCalculadoraGrasa> {
                 enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: const BorderSide(
-                  color: Color(0xFF4B0082),
-                  width: 2.5
+                  color: Color(0xFF000000 ),
+                  //width: 2.5,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                   borderSide: const BorderSide(
-                    color: Color(0xFF4B0082),
-                    width: 2.5
+                    color: Color(0xFF000000 ),
+                   // width: 2.5
                   ),
                 ),
-                labelText: "Altura",
-                labelStyle: const TextStyle(
-                  color: Color(0xFF4B0082),
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold
-                )
+                labelText: "Introduce tu altura",
+                labelStyle:  
+                const TextStyle(
+                color: Color(0xFF000000), 
+                fontSize: 15,
+                //fontWeight: FontWeight.bold
+                ),
+                floatingLabelBehavior: FloatingLabelBehavior.never
                 ),
                 keyboardType: TextInputType.number,
-                style: const TextStyle(
-                  color: Color(0xFF4B0082)),
+                style:  const TextStyle(
+                  color: Color(0xFF000000)),
               ),
+                  ],
+                )
+                
             ),
 
             SizedBox(
-              width: ancho*0.4,
-                height: alto*0.2,
-                child : Column(
-                  children: [
-              SizedBox(
-                
-                width: ancho*0.4,
-                child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: const Color(0xFF4B0082),
-                        width: 2.5
-                        ),
-                      borderRadius: BorderRadius.circular(20),
-                      
-                    ),
-                      child: DropdownButton<String>(
-                        value: _genero,
-                        
-                        items: list.map((String genero) {
-                          return DropdownMenuItem<String>(
-                            value: genero,
-                            child: Text(genero,
-                            style: const TextStyle(color: Color(0xFF4B0082),
-                            fontWeight: FontWeight.bold),
-                            ),
-                          );
-                        }).toList(),
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            _genero = newValue!;
-                          });
-                        },
-                        //0xFF111717
-                        style: const TextStyle(color: Color(0xFF111717)),
-                        iconEnabledColor: const Color(0xFF4B0082),
-                        dropdownColor: const Color(0xFF111717),
-                        underline: Container(),
-                        borderRadius: BorderRadius.circular(20),
-                        padding:  EdgeInsets.symmetric(horizontal: ancho*0.025),
-                      
-                      
-                   ),
+  width: ancho * 0.4,
+  height: alto * 0.25,
+  child: Column(
+    children: [
+      const Align(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "    Genero", 
+          style: TextStyle(fontWeight: FontWeight.bold,color: Color(0xFF1A237E)),
+        ),
+      ),
+      SizedBox(
+        width: ancho * 0.4,
+        child: DropdownButtonFormField<String>(
+          value: _genero,
+          decoration: InputDecoration(
+            // El borde se mantiene igual en todos los estados.
+            enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: Color(0xFF000000), // Color del borde
+                width: 1.0,
+              ),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: Color(0xFF000000), // Color del borde cuando tiene el foco
+                width: 1.0,
+              ),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            border: OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: Color(0xFF000000), // Color del borde por defecto
+                width: 1.0,
+              ),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            fillColor: const Color(0xFFFFFFFF), // Color de fondo siempre blanco
+            filled: true, // Rellena con el color especificado
+          ),
+          items: list.map((String genero) {
+            return DropdownMenuItem<String>(
+              value: genero,
+              child: Text(
+                genero,
+                style: const TextStyle(
+                  color: Color(0xFF000000), // Estilo del texto
                 ),
               ),
-            ],
-                )
-            ),
+            );
+          }).toList(),
+          onChanged: (String? newValue) {
+            setState(() {
+              _genero = newValue!;
+            });
+          },
+          style: const TextStyle(color: Color(0xFF000000)), // Estilo del texto
+          iconEnabledColor: const Color(0xFF000000),
+           // Color del icono del dropdown
+          dropdownColor: const Color(0xFFFFFFFF), // Color del fondo del menu desplegable
+           // Remueve la línea de abajo
+        ),
+      ),
+    ],
+  ),
+)
+
               ]
                 ),
               ElevatedButton(
                 onPressed: _calcularGrasa,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF4B0082),
-                  foregroundColor: const Color(0xFF111717),
+                  backgroundColor: const Color(0xFFFFFFFF),
+                  foregroundColor: const Color(0xFF000000),
                   textStyle: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold),
                   minimumSize: Size(ancho*0.14, alto*0.09),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: const BorderSide(
+                      color: Colors.black
+                    )
+                  )
                   
                 ), 
-                child: const Text("Calcular"),
+                child: const Text("Calcular",style: TextStyle(color: Color(0xFF1A237E)),),
                 ),
                 SizedBox(height: alto*0.05),
                 Column(
@@ -310,14 +374,14 @@ class _PantallaCalculadoraGrasa extends State<PantallaCalculadoraGrasa> {
                     if (_resultado != null && (_resultado! <= 1 || _resultado! >= 70))
                 const Text(
                 "El cálculo no es realista, verifica tus datos.",
-                style: TextStyle(color: Color(0xFF4B0082),
+                style: TextStyle(color: Color(0xFF1A237E),
                 fontWeight: FontWeight.bold
                 ),
                 ),
                 if (_resultado != null && _resultado! > 1 && _resultado! < 70)
                 Text(
                 "Tu porcentaje de grasa es ${_resultado!.toStringAsFixed(1)}% y tu IMC es ${_imc!.toStringAsFixed(1)}",
-                style: const TextStyle(color: Color(0xFF4B0082),
+                style: const TextStyle(color: Color(0xFF1A237E),
                 fontWeight: FontWeight.bold),
                 ),
                   ],
